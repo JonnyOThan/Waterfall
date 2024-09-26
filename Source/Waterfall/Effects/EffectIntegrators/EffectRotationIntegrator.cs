@@ -8,13 +8,13 @@ namespace Waterfall
   {
     public EffectRotationIntegrator(WaterfallEffect effect, EffectRotationModifier mod) : base(effect, mod)
     {
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
         initialValues[i] = xforms[i].localEulerAngles;
     }
 
     protected override void Apply()
     {
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
         xforms[i].localEulerAngles = workingValues[i];
     }
   }

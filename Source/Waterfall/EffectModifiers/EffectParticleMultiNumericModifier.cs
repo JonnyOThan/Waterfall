@@ -94,9 +94,11 @@ namespace Waterfall
 
     public void Get(float[] input, MultiNumericData[] output)
     {
+      // TODO: move switches outside loops; don't do array access multiple times
+
       if (input.Length > 1)
       {
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
         {
           switch (output[i].mode)
           {
@@ -134,7 +136,7 @@ namespace Waterfall
             /// Not supported yet
             break;
         }
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
         {
           switch (output[i].mode)
           {

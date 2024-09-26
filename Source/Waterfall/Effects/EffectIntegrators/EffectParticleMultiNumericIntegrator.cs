@@ -89,7 +89,7 @@ namespace Waterfall
       paramName = mod.paramName;
       systems = new ParticleSystem[xforms.Count];
 
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         modifierData[i] = new();
         workingValues[i] = new();
@@ -170,7 +170,7 @@ namespace Waterfall
     }
     protected override void Apply()
     {
-      for (int i = 0; i < systems.Length; i++)
+      for (int i = systems.Length; i-- > 0;)
       {
         if (curveMode == ParticleSystemCurveMode.Constant)
         {

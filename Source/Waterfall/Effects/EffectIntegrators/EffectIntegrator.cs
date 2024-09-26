@@ -64,28 +64,28 @@ namespace Waterfall
       switch (mode)
       {
         case EffectModifierMode.REPLACE:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = modifiers[i];
           }
           break;
 
         case EffectModifierMode.MULTIPLY:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] *= modifiers[i];
           }
           break;
 
         case EffectModifierMode.ADD:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] += modifiers[i];
           }
           break;
 
         case EffectModifierMode.SUBTRACT:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] -= modifiers[i];
           }
@@ -99,28 +99,28 @@ namespace Waterfall
       switch (mode)
       {
         case EffectModifierMode.REPLACE:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = modifiers[i];
           }
           break;
 
         case EffectModifierMode.MULTIPLY:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = Vector2.Scale(items[i], modifiers[i]);
           }
           break;
 
         case EffectModifierMode.ADD:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] += modifiers[i];
           }
           break;
 
         case EffectModifierMode.SUBTRACT:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] -= modifiers[i];
           }
@@ -134,28 +134,28 @@ namespace Waterfall
       switch (mode)
       {
         case EffectModifierMode.REPLACE:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = modifiers[i];
           }
           break;
 
         case EffectModifierMode.MULTIPLY:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = Vector3.Scale(items[i], modifiers[i]);
           }
           break;
 
         case EffectModifierMode.ADD:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] += modifiers[i];
           }
           break;
 
         case EffectModifierMode.SUBTRACT:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] -= modifiers[i];
           }
@@ -169,28 +169,28 @@ namespace Waterfall
       switch (mode)
       {
         case EffectModifierMode.REPLACE:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = modifiers[i];
           }
           break;
 
         case EffectModifierMode.MULTIPLY:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] *= modifiers[i];
           }
           break;
 
         case EffectModifierMode.ADD:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] += modifiers[i];
           }
           break;
 
         case EffectModifierMode.SUBTRACT:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] -= modifiers[i];
           }
@@ -204,28 +204,28 @@ namespace Waterfall
       switch (mode)
       {
         case EffectModifierMode.REPLACE:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] = modifiers[i];
           }
           break;
 
         case EffectModifierMode.MULTIPLY:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] *= modifiers[i];
           }
           break;
 
         case EffectModifierMode.ADD:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] += modifiers[i];
           }
           break;
 
         case EffectModifierMode.SUBTRACT:
-          for (int i = 0; i < count; i++)
+          for (int i = count; i-- > 0;)
           {
             items[i] -= modifiers[i];
           }

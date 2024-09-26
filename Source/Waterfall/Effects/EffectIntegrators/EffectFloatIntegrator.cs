@@ -30,7 +30,7 @@ namespace Waterfall
 
       r                  = new Renderer[xforms.Count];
 
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         r[i] = xforms[i].GetComponent<Renderer>();
 
@@ -57,7 +57,7 @@ namespace Waterfall
       if (testIntensity)
       {
         anyActive = false;
-        for (int i = 0; i < r.Length; i++)
+        for (int i = r.Length; i-- > 0;)
         {
           var rend = r[i];
           float val = workingValues[i];
@@ -77,7 +77,7 @@ namespace Waterfall
       else
       {
         anyActive = true;
-        for (int i = 0; i < r.Length; i++)
+        for (int i = r.Length; i-- > 0;)
         {
           var rend = r[i];
           float val = workingValues[i];

@@ -43,7 +43,7 @@ namespace Waterfall
     {
       base.Init(parentEffect);
       m = new Material[xforms.Count];
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         m[i] = xforms[i].GetComponent<Renderer>().material;
       }
@@ -52,7 +52,7 @@ namespace Waterfall
     public override void Apply(float[] strengthList)
     {
       float strength = strengthList[0];
-      for (int i = 0; i < m.Length; i++)
+      for (int i = m.Length; i-- > 0;)
       {
         var   original = m[i].GetTextureOffset(textureName);
         float x        = original.x + scrollCurveX.Evaluate(strength) * Time.deltaTime;

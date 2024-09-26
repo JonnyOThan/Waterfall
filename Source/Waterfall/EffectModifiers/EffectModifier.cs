@@ -198,7 +198,7 @@ namespace Waterfall
     {
       if (input.Length > 1)
       {
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
         {
           float inValue = input[i];
           output[i] = new(rCurve.Evaluate(inValue) + randomValue,
@@ -215,7 +215,7 @@ namespace Waterfall
           gCurve.Evaluate(inValue) + randomValue,
           bCurve.Evaluate(inValue) + randomValue,
           aCurve.Evaluate(inValue) + randomValue);
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
           output[i] = color;
       }
     }
@@ -247,7 +247,7 @@ namespace Waterfall
     {
       if (input.Length > 1)
       {
-        for (int i = 0; i < xforms.Count; i++)
+        for (int i = xforms.Count; i-- > 0;)
         {
           float inValue = input[i];
           output[i] = new(xCurve.Evaluate(inValue) + randomValue,
@@ -260,7 +260,7 @@ namespace Waterfall
         Vector2 vec = new(
           xCurve.Evaluate(inValue) + randomValue,
           yCurve.Evaluate(inValue) + randomValue);
-        for (int i = 0; i < xforms.Count; i++)
+        for (int i = xforms.Count; i-- > 0;)
           output[i] = vec;
       }
     }
@@ -295,7 +295,7 @@ namespace Waterfall
     {
       if (input.Length > 1)
       {
-        for (int i = 0; i < xforms.Count; i++)
+        for (int i = xforms.Count; i-- > 0;)
         {
           float inValue = input[i];
           output[i] = new(xCurve.Evaluate(inValue) + randomValue,
@@ -310,7 +310,7 @@ namespace Waterfall
           xCurve.Evaluate(inValue) + randomValue,
           yCurve.Evaluate(inValue) + randomValue,
           zCurve.Evaluate(inValue) + randomValue);
-        for (int i = 0; i < xforms.Count; i++)
+        for (int i = xforms.Count; i-- > 0;)
           output[i] = vec;
       }
     }
@@ -339,13 +339,13 @@ namespace Waterfall
     {
       if (input.Length > 1)
       {
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
           output[i] = curve.Evaluate(input[i]) + randomValue;
       }
       else if (input.Length == 1)
       {
         float data = curve.Evaluate(input[0]) + randomValue;
-        for (int i = 0; i < output.Length; i++)
+        for (int i = output.Length; i-- > 0;)
           output[i] = data;
       }
     }

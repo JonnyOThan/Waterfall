@@ -9,13 +9,13 @@ namespace Waterfall
 
     public EffectPositionIntegrator(WaterfallEffect effect, EffectPositionModifier posMod) : base(effect, posMod)
     {
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
         initialValues[i] = xforms[i].localPosition;
     }
 
     protected override void Apply()
     {
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
         xforms[i].localPosition = workingValues[i];
     }
   }

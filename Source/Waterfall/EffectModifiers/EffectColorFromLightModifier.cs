@@ -57,7 +57,7 @@ namespace Waterfall
 
     protected override void ApplyReplace(float[] strengthList)
     {
-      for (int i = 0; i < m.Length; i++)
+      for (int i = m.Length; i-- > 0;)
       {
         if (lights != null && lights.Length > i)
           m[i].SetColor(colorPropertyID, lights[i].color * colorBlend + Color.white * (1f - colorBlend));

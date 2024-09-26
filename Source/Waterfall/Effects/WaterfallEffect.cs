@@ -364,6 +364,8 @@ namespace Waterfall
 
     private void UpdateIntegratorArray<T>(List<T> integrators) where T : EffectIntegrator
     {
+      // TODO: figure out how to make this play nicely with reverse for iteration
+      // we'd need to reverse the sort order for TestIntensity integrators, and adjust all the iteration logic...
       for (int i = 0; i < integrators.Count;)
       {
         var integrator = integrators[i];
@@ -390,6 +392,8 @@ namespace Waterfall
     {
       bool anyActive = false;
 
+      // TODO: figure out how to make this play nicely with reverse for iteration
+      // we'd need to reverse the sort order for TestIntensity integrators, and adjust all the iteration logic...
       for (int i=0; i < integrators.Count;)
       {
         var integrator = integrators[i];

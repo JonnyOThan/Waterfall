@@ -18,7 +18,7 @@ namespace Waterfall
 
       l = new Light[xforms.Count];
 
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         l[i] = xforms[i].GetComponent<Light>();
 
@@ -33,7 +33,7 @@ namespace Waterfall
       bool anyActive = false;
 
       float lightBaseScale = parentEffect.TemplateScaleOffset.x;
-      for (int i = 0; i < l.Length; i++)
+      for (int i = l.Length; i-- > 0;)
       {
         var light = l[i];
         float value = workingValues[i] * lightBaseScale;
@@ -56,6 +56,7 @@ namespace Waterfall
 
     protected void UpdateFloats(Light l, float f)
     {
+      // TODO: this is probably better with a delegate
       if (floatName == "Intensity") l.intensity = f;
       else if (floatName == "Range") l.range = f;
       else if (floatName == "SpotAngle") l.spotAngle = f;

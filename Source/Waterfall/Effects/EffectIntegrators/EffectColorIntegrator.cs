@@ -28,7 +28,7 @@ namespace Waterfall
 
       m                  = new Material[xforms.Count];
 
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         m[i] = xforms[i].GetComponent<Renderer>().material;
         if (m[i].HasProperty(colorPropertyID))
@@ -44,7 +44,7 @@ namespace Waterfall
 
     protected override void Apply()
     {
-      for (int i = 0; i < m.Length; i++)
+      for (int i = m.Length; i-- > 0;)
         m[i].SetColor(colorPropertyID, workingValues[i]);
     }
   }

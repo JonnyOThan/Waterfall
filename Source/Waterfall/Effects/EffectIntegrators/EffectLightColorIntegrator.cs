@@ -16,7 +16,7 @@ namespace Waterfall
       colorName        = floatMod.colorName;
       l = new Light[xforms.Count];
 
-      for (int i = 0; i < xforms.Count; i++)
+      for (int i = xforms.Count; i-- > 0;)
       {
         l[i] = xforms[i].GetComponent<Light>();
         initialValues[i] = l[i].color;
@@ -25,7 +25,7 @@ namespace Waterfall
 
     protected override void Apply()
     {
-      for (int i = 0; i < l.Length; i++)
+      for (int i = l.Length; i-- > 0;)
         l[i].color = workingValues[i];
     }
   }
